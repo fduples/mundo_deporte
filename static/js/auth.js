@@ -40,7 +40,15 @@ document.addEventListener('DOMContentLoaded', function() {//Este método lo usam
                 Salir
             `;
             container.appendChild(logoutLink);
+        } else if(currentPath === '/mundo_deporte/templates/about.html' || currentPath === '/mundo_deporte/templates/products.html'){
+            logoutLink.className = 'logout text-decoration-none';
+            logoutLink.innerHTML = `
+                <img src="../static/img/user.png" width="20px" height="20px">
+                Salir
+            `;
+            container.appendChild(logoutLink);
         } else {
+            console.log(currentPath);
             logoutLink.className = "nav-link";
             logoutLink.innerHTML = `
                 <img src="../static/img/user.png" width="20px" height="20px">
@@ -65,11 +73,17 @@ document.addEventListener('DOMContentLoaded', function() {//Este método lo usam
             if (carritoAdminLink != null && currentPath != '/mundo_deporte/templates/usuarios.html' || currentPath != '/mundo_deporte/templates/productos.html' || currentPath != '/mundo_deporte/templates/admin.html') {
                 carritoAdminLink.style.display = 'none';
             }
-            if (currentPath != '/mundo_deporte/templates/usuarios.html' || currentPath != '/mundo_deporte/templates/productos.html' || currentPath != '/mundo_deporte/templates/admin.html') {
+            if (currentPath === '/mundo_deporte/index.html' || currentPath === '/mundo_deporte/') {
                 const adminElement = document.createElement('a');
                 adminElement.className = 'cart  text-decoration-none';
                 adminElement.href = 'templates/admin.html';
                 adminElement.innerHTML = '<img src="static/img/users.png" width="20px" height="25px"> Administración General';
+                container.appendChild(adminElement);
+            } else if (currentPath === '/mundo_deporte/templates/about.html' || currentPath === '/mundo_deporte/templates/products.html') {
+                const adminElement = document.createElement('a');
+                adminElement.className = 'cart  text-decoration-none';
+                adminElement.href = 'admin.html';
+                adminElement.innerHTML = '<img src="../static/img/users.png" width="20px" height="25px"> Administración General';
                 container.appendChild(adminElement);
             }
             

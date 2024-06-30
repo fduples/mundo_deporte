@@ -108,7 +108,7 @@ function register() {
                 text: "Usuario registrado correctamente",
                 confirmButtonText: "OK"
             }).then(() => {
-                window.location.href = '/mundo_deporte/index.html'; // Redirigir al índice
+                window.location.href = '/index.html'; // Redirigir al índice
             });
         } else {
             Swal.fire({
