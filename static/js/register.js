@@ -92,7 +92,7 @@ function register() {
         contrasenia: contrasenia.value
     };
 
-    fetch('http://fduples.pythonanywhere.com/register', {
+    fetch('https://fduples.pythonanywhere.com/register', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

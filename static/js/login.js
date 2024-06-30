@@ -6,7 +6,7 @@ document.getElementById('login-form').addEventListener('submit', function(event)
     const email = document.getElementById('uname').value;
     const contrasenia = document.getElementById('pass').value;
 
-    fetch('http://fduples.pythonanywhere.com/login', { //Le pegamos al endpoint de logueo con el metodo post y manejamos las promesas
+    fetch('https://fduples.pythonanywhere.com/login', { //Le pegamos al endpoint de logueo con el metodo post y manejamos las promesas
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

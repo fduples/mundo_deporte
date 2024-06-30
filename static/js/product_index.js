@@ -1,4 +1,4 @@
-fetch('http://fduples.pythonanywhere.com/productos', {
+fetch('https://fduples.pythonanywhere.com/productos', {
     method: 'GET',
     headers: {
         'Content-Type': 'application/json'
