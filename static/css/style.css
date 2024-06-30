@@ -1,0 +1,288 @@
+/* importa las fuentes desde google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Declaramos el tipo de fuente que se utilizara por defecto en la pagina  */
+body{
+	background-color: #FFFFFF;
+    margin:0;
+    font-family: "Kanit", sans-serif;
+    /*font-weight: 600;*/
+    /*font-style: normal;*/
+}
+
+
+/* Creamos animaciones para que el texto del nav pase de blanco a dorado */
+.header-element a, .login-register, .logout, .cart, .admin{
+    color: white;
+    font-size: 20px;
+    transition: 0.3s all;
+}
+.header-element a:hover, .login-register:hover, .logout:hover, .cart:hover, .admin {
+    color: goldenrod;
+    cursor:pointer;
+}
+/* Creamos un contenedor para poder tener todo el encabezado de la pagina bien estructurado en una grilla */
+.container{
+    border: 30px solid #FFFFFF;
+	border-radius: 50px; 
+	background-color:#000000;
+	display: grid;
+	grid-template-areas:'. . login-register '
+						'. logo carrito' 
+                        'nav-menu nav-menu nav-menu';
+    /* grid-template-rows: 33% 33% 33%; */
+    grid-template-columns: 33.3% 33.3% 33.3%;
+}
+/* Centramos el logo de la pagina */
+.logo{
+	grid-area:logo;
+	text-align:center;
+    margin:auto;
+    
+}
+.logo img{
+    width:80%; 
+}
+/* Le añadimos un margin al carrito para desplazarlo hacia la derecha */
+.cart{
+	grid-area:carrito;
+	margin-left:40%;
+    height: 0;
+}
+/* Lo mismo pero con el login */
+.login-register, .logout{
+    grid-area: login-register;
+    margin-left: 40%;
+    margin-top: 5%;
+}
+/* Centramos el menu nav */
+.nav-menu{
+    grid-area: nav-menu;
+    text-align: center;
+    margin-right: 9%;   /*Si se modifican los textos del nav modificar este valor para centrarlo bien*/
+    margin-top: 20px;
+}
+/* Les quitamos las decoraciones (Los puntitos) */
+.nav-menu ul{
+    list-style: none;
+    /* margin-left:20%; */
+
+}
+/* no recuerdo jeje */
+.nav-menu ul li{
+    display: inline;
+    margin-left: 5%;
+    /* margin-left:20%; */
+    
+}
+/* Quitamos el subrayado*/
+.nav-menu ul li a{
+    text-decoration: none;
+}
+/* ******************************Index page****************************** */
+
+/* Subtitulo por ejemplo en el index el que dice "LO MAS NUEVO" */
+.subtitle{
+    color: #000000;
+}
+/* Centramos */
+.subtitle,.content,.description{
+	text-align:center;
+}
+
+/* Pie de la pagina */
+.footer{
+    background-color: #DDDDDD;
+    border-radius: 5px;
+    padding: 3% 0 3% 0;
+    margin-top: 5%;
+}
+/* Texto pie de la pagina */
+.footer p {
+    color:black;
+    text-align:center;
+}
+/* Creamos una grilla para los productos de la seccion "Lo mas nuevo" */
+.container-products{
+    display: grid;
+    margin-left: 5%;
+    margin-right: 5%;
+    /* padding-bottom: 200px; */
+
+	grid-template-areas:'p1 p2 p3 p4'; 
+    grid-template-columns: 22% 22% 22% 22%;
+    border: 5px solid gray;
+    gap:4%;
+
+    /* grid-template-rows: 70% 30%; */
+}
+/* Centramos */
+.p1, .p2, .p3, .p4 {
+    transition: 0.2s;
+    text-align: center;
+}
+.p1 p, .p2 p, .p3 p, .p4 p {
+margin:0 0 0 0;
+}
+/* Declaramos los nombres para poder usarlos en la grilla */
+.p1{
+    grid-area: p1;
+}
+
+.p2{
+    grid-area: p2;
+}
+
+.p3{
+    grid-area: p3;
+}
+
+.p4{
+    grid-area: p4;
+}
+
+.p1:hover,.p2:hover,.p3:hover,.p4:hover{
+    opacity: 0.9;
+    filter: brightness(0.90);
+}
+/* ******************************Login page****************************** */
+/* Creamos el contenedor del formulario */
+.login-form{
+    padding-bottom: 5%;
+    margin-left: 25%;
+    margin-right: 25%;
+    background-color: lightgray;
+    border-radius: 10px;
+}
+/* desplazamos un poco hacia la derecha todo los inputs */
+.login-data-container{
+    margin-left: 10%;
+}
+/* Centramos el titulo */
+.login-title{
+    text-align: center;
+}
+/* Removemos los bordes de los inputs y los separamos un poco */
+#uname,#pass,#pass2,#email,#r-email{
+    border: 3px none #000000;
+    border-bottom: solid #000000;
+    background-color: lightgray;
+    margin-top: 2%;
+    margin-left: 1%;
+}
+/* Centramos el boton de registrarse */
+.submit-container{
+    display:flex;
+    justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+/* lo hacemos mas ancho */
+#login-btn{
+    width: 40%;
+}
+
+/* *********************************Product page ******************************** */
+.product-container-page{
+    display: grid;
+    border: 20px solid goldenrod;
+    grid-template-areas:'p-img p-title' 
+                        'p-img p-price' 
+                        'p-img p-desc' 
+                        'p-img p-quantity' 
+                        'p-img p-add';
+
+    margin-left: 5%;
+    margin-right: 5%;
+    grid-template-columns: 50% 46%;
+    column-gap:0%;
+    justify-items: center;
+
+}
+.product-img{
+    grid-area: p-img;
+    text-align: center;
+    margin: auto;
+    }
+.product-title{
+    grid-area: p-title;
+    text-align: center;
+}
+.product-price{
+    grid-area: p-price;
+    color:goldenrod;
+}
+.product-desription{
+    grid-area: p-desc;
+}
+.product-desription p{
+    text-align: justify;
+    margin-right: 5%;
+}
+
+.product-quantity{
+    grid-area: p-quantity;
+}
+.add-product{
+    grid-area: p-add;
+}
+.add-product input{
+    width:40px;
+}
+
+/********************************************Responsive***************************************/
+@media screen and (max-width:1050px){
+
+    /* ************************************HEADER*********************************** */
+    .container{
+        border: 30px solid #FFFFFF;
+        border-radius: 50px; 
+        background-color:#000000;
+        display: grid;
+        grid-template-areas:'login-register . . '
+                            'carrito logo .' 
+                            'nav-menu nav-menu nav-menu';
+        grid-template-columns: 33.3% 33.3% 33.3%;
+    }
+    .login-register, .logout{
+        grid-area: login-register;
+        margin-left: 5%;
+        margin-top: 5%;
+    }
+    .cart{
+        grid-area:carrito;
+        margin-left:5%;
+        margin-top: 5%;
+    }
+    /***********************************Product Page***************************************/
+    .product-container-page{
+        display: grid;
+        border: 20px solid goldenrod;
+        grid-template-areas:'p-title' 
+                            'p-img' 
+                            'p-price' 
+                            'p-desc' 
+                            'p-quantity' 
+                            'p-add';
+    
+        margin-left: 5%;
+        margin-right: 5%;
+        grid-template-columns: 100%;
+        column-gap:0%;
+        justify-items: center;
+    
+    }
+
+    .login-register, .cart, .logout, .admin{
+        font-size: 12px;
+    }
+    .p1, .p2, .p3, .p4{
+        font-size: 8px ;
+    }
+
+    #uname,#pass,#pass2,#email,#r-email{
+        width: 80%;
+    }
+}
+
+/* ************************************Pruebas*********************************** */

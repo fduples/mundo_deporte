@@ -1,0 +1,71 @@
+<!-- ctrl + shitf + p (Open options vscode "simple browser:show") -->
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/css/style.css">
+        <title>Mundo deportes inicio - </title>
+    </head>
+    <body>
+        <header>
+            <!--Header container-->
+            <div class="container">
+                <!--User Login-->
+                <a class="login-register" href="templates/login.html">
+                    <img src="/static/img/user.png" width="20px" height="20px">
+                    Entrar/Registrarse
+                </a> 
+                <a class="logo" href="index.html">
+                    <img src="/static/img/logo.jpg">
+                </a>
+                <!--Cart-->
+                <a class="cart" href="">
+                    <img src="/static/img/cart.png" width="20px" height="20px">
+                    Carrito
+                </a>
+                <!--Nav Menu-->
+                <nav class="nav-menu">
+                    <ul class="nav-menu-ul">
+                        <li class="header-element">
+                            <a href="/index.html">Inicio</a>
+                        </li>
+                        <li class="header-element">
+                            <a href="templates/products.html">Todos los Productos</a>
+                        </li>
+                        <li class="header-element">
+                            <a href="">Deportes</a>
+                        </li>
+                        <li class="header-element">
+                            <a href="templates/about.html">Acerca de nosotros</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!--Body-->
+       <main>
+        
+        
+            <div class="row" id="productGrid">
+                <!-- Aquí se insertarán los productos -->
+            </div>
+        
+        
+    </main>
+       
+    
+        <footer>
+            <div class="footer">
+                <p>Esta pagina ha sido creada con propositos educativos y las imagenes fueron tomadas de diversas paginas por lo tanto creditos a sus respectivos autores</p>
+            </div>
+    </footer>
+    <script src="static/js/auth.js"></script>
+    <script src="/static/js/product_grid.js"></script>
+    
+    </body>
+</html>
+
+
