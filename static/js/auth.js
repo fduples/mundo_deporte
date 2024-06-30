@@ -10,12 +10,13 @@ document.addEventListener('DOMContentLoaded', function() {//Este método lo usam
     const currentPath = window.location.pathname;//Verifico el path para adaptar la busqueda de assets segun si estamos en el index o en otro locación
 
     console.log(currentPath)
+
         //Verifico que si se esta cargadon admin, ususarios.html o productos y no es admin entonces vuevla al index
     if (currentPath === '/mundo_deporte/templates/usuarios.html' || currentPath === '/mundo_deporte/templates/productos.html' || currentPath === '/mundo_deporte/templates/admin.html') {
         
         if (!isAdmin || isAdmin !== 'true') {
             alert('No tienes permisos de administrador. Serás redirigido a la página principal.');
-            window.location.href = '/mundo_deporte/';
+            window.location.href = '/';
             return;
         }
     }
@@ -92,5 +93,5 @@ function logout() {//Funcion para desloguear un usuario y redirigir al inicio
     if (localStorage.getItem('nombre')) {
         localStorage.removeItem('nombre');
     }
-    window.location.href = '/index.html';
+    window.location.href = '/mundo_deporte/index.html';
 }

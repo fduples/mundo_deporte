@@ -6,7 +6,6 @@ fetch('https://fduples.pythonanywhere.com/productos', {
 })
 .then(response => response.json())
 .then(data => {
-    console.log('Fetched product data:', data);
 
     const productGrid = document.getElementById('productGrid');
     productGrid.innerHTML = '';
