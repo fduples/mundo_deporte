@@ -11,11 +11,11 @@ document.addEventListener('DOMContentLoaded', function() {//Este método lo usam
 
     console.log(currentPath)
         //Verifico que si se esta cargadon admin, ususarios.html o productos y no es admin entonces vuevla al index
-    if (currentPath === '/CaC-MundoDeporte-Front-Back/templates/usuarios.html' || currentPath === '/CaC-MundoDeporte-Front-Back/templates/productos.html' || currentPath === '/CaC-MundoDeporte-Front-Back/templates/admin.html') {
+    if (currentPath === '/templates/usuarios.html' || currentPath === '/templates/productos.html' || currentPath === '/templates/admin.html') {
         
         if (!isAdmin || isAdmin !== 'true') {
             alert('No tienes permisos de administrador. Serás redirigido a la página principal.');
-            window.location.href = '/CaC-MundoDeporte-Front-Back/';
+            window.location.href = '/';
             return;
         }
     }
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {//Este método lo usam
         // Creo enlace de cierre de sesión en el espacio del grid en que iba el de logueo segun la pagina en la que esta el ususario
         const logoutLink = document.createElement('a');
         logoutLink.href = '#';
-        if (currentPath === '/CaC-MundoDeporte-Front-Back/' || currentPath === '/CaC-MundoDeporte-Front-Back/index.html') {
+        if (currentPath === '/' || currentPath === '/index.html') {
             logoutLink.className = 'logout  text-decoration-none';
             logoutLink.innerHTML = `
                 <img src="static/img/user.png" width="20px" height="20px">
@@ -61,11 +61,11 @@ document.addEventListener('DOMContentLoaded', function() {//Este método lo usam
 
         // Aca la idea es que se muestre lo que el administrador puede ver
         if (isAdmin && isAdmin === 'true') {
-            if (carritoAdminLink != null && currentPath != '/CaC-MundoDeporte-Front-Back/templates/usuarios.html' || currentPath != '/CaC-MundoDeporte-Front-Back/templates/productos.html' || currentPath != '/CaC-MundoDeporte-Front-Back/templates/admin.html') {
+            if (carritoAdminLink != null && currentPath != '/templates/usuarios.html' || currentPath != '/templates/productos.html' || currentPath != '/templates/admin.html') {
                 console.log(carritoAdminLink);
                 carritoAdminLink.style.display = 'none';
             }
-            if (currentPath != '/CaC-MundoDeporte-Front-Back/templates/usuarios.html' || currentPath != '/CaC-MundoDeporte-Front-Back/templates/productos.html' || currentPath != '/CaC-MundoDeporte-Front-Back/templates/admin.html') {
+            if (currentPath != '/templates/usuarios.html' || currentPath != '/templates/productos.html' || currentPath != '/templates/admin.html') {
                 const adminElement = document.createElement('a');
                 adminElement.className = 'cart  text-decoration-none';
                 adminElement.href = 'templates/admin.html';
@@ -96,5 +96,5 @@ function logout() {//Funcion para desloguear un usuario y redirigir al inicio
         localStorage.removeItem('nombre');
         console.log('El elemento nombre fue eliminado.');
     }
-    window.location.href = '/CaC-MundoDeporte-Front-Back/index.html';
+    window.location.href = '/index.html';
 }
