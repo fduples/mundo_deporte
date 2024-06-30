@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('http://127.0.0.1:5000/users', {
+    fetch('http://fduples.pythonanywhere.com/users', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const admin = document.getElementById('userAdmin').checked;
 
         const method = userId ? 'PUT' : 'POST';
-        const url = userId ? `http://127.0.0.1:5000/user/${userId}` : 'http://127.0.0.1:5000/register'; //Si tiene id le pega al endpoint de editar y si no tiene al de registrar
+        const url = userId ? `http://fduples.pythonanywhere.com/user/${userId}` : 'http://fduples.pythonanywhere.com/register'; //Si tiene id le pega al endpoint de editar y si no tiene al de registrar
 
         fetch(url, {
             method: method,
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function handleEdit(event) {//Este es manejador de edicion de ususarios
     const userMail = event.target.getAttribute('data-mail');
-    fetch(`http://127.0.0.1:5000/user/${userMail}`, {//Envia el correo como parámetro ya que buscamos que traiga los datos del usuario que queremos editar y los despliegue en el modal
+    fetch(`http://fduples.pythonanywhere.com/user/${userMail}`, {//Envia el correo como parámetro ya que buscamos que traiga los datos del usuario que queremos editar y los despliegue en el modal
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
@@ -102,7 +102,7 @@ function handleDelete(event) {//Manejador de borrado. Enviamos como lo pide el e
     const userId = event.target.getAttribute('data-id');
 
     if (confirm("Are you sure you want to delete this user?")) {
-        fetch(`http://127.0.0.1:5000/user/${userId}`, {
+        fetch(`http://fduples.pythonanywhere.com/user/${userId}`, {
             method: 'DELETE'
         })
         .then(response => response.json())//Si la promesa se cumple "Success" refrescamos la página sino alertamos el error

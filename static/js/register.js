@@ -92,7 +92,7 @@ function register() {
         contrasenia: contrasenia.value
     };
 
-    fetch('http://127.0.0.1:5000/register', {
+    fetch('http://fduples.pythonanywhere.com/register', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -108,7 +108,7 @@ function register() {
                 text: "Usuario registrado correctamente",
                 confirmButtonText: "OK"
             }).then(() => {
-                window.location.href = '/CaC-MundoDeporte-Front-Back/index.html'; // Redirigir al índice
+                window.location.href = '/index.html'; // Redirigir al índice
             });
         } else {
             Swal.fire({

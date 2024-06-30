@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {//Este método lo usam
         const logoutLink = document.createElement('a');
         logoutLink.href = '#';
         if (currentPath === '/' || currentPath === '/index.html') {
-            logoutLink.className = 'logout  text-decoration-none';
+            logoutLink.className = 'logout text-decoration-none';
             logoutLink.innerHTML = `
                 <img src="static/img/user.png" width="20px" height="20px">
                 Salir
@@ -62,7 +62,6 @@ document.addEventListener('DOMContentLoaded', function() {//Este método lo usam
         // Aca la idea es que se muestre lo que el administrador puede ver
         if (isAdmin && isAdmin === 'true') {
             if (carritoAdminLink != null && currentPath != '/templates/usuarios.html' || currentPath != '/templates/productos.html' || currentPath != '/templates/admin.html') {
-                console.log(carritoAdminLink);
                 carritoAdminLink.style.display = 'none';
             }
             if (currentPath != '/templates/usuarios.html' || currentPath != '/templates/productos.html' || currentPath != '/templates/admin.html') {
@@ -84,17 +83,14 @@ document.addEventListener('DOMContentLoaded', function() {//Este método lo usam
 function logout() {//Funcion para desloguear un usuario y redirigir al inicio
     if (localStorage.getItem('isLoggedIn')) {
         localStorage.removeItem('isLoggedIn');
-        console.log('El elemento isLoggedIn fue eliminado.');
     }
 
     if (localStorage.getItem('isAdmin')) {
         localStorage.removeItem('isAdmin');
-        console.log('El elemento isAdmin fue eliminado.');
     }
 
     if (localStorage.getItem('nombre')) {
         localStorage.removeItem('nombre');
-        console.log('El elemento nombre fue eliminado.');
     }
     window.location.href = '/index.html';
 }

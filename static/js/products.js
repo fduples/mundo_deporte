@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('http://127.0.0.1:5000/productos', {
+    fetch('http://fduples.pythonanywhere.com/productos', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const imagen = document.getElementById('productImage').value;
 
         const method = productId ? 'PUT' : 'POST';
-        const url = productId ? `http://127.0.0.1:5000/producto/${productId}` : 'http://127.0.0.1:5000/producto';
+        const url = productId ? `http://fduples.pythonanywhere.com/producto/${productId}` : 'http://fduples.pythonanywhere.com/producto';
         console.log(url);
         console.log(method);
         fetch(url, {
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function handleEdit(event) {
     const productId = event.currentTarget.getAttribute('data-id');
 
-    fetch(`http://127.0.0.1:5000/producto/${productId}`, {
+    fetch(`http://fduples.pythonanywhere.com/producto/${productId}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
@@ -113,7 +113,7 @@ function handleDelete(event) {
     const productId = event.currentTarget.getAttribute('data-id');
 
     if (confirm("¿Seguro que quieres eliminar este producto?")) {
-        fetch(`http://127.0.0.1:5000/producto/${productId}`, {
+        fetch(`http://fduples.pythonanywhere.com/producto/${productId}`, {
             method: 'DELETE'
         })
         .then(response => response.json())
@@ -138,7 +138,7 @@ function resetModal() {
 }
 
 function loadCategories(selectedCategoryId = null) {
-    fetch('http://127.0.0.1:5000/categorias', {
+    fetch('http://fduples.pythonanywhere.com/categorias', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
