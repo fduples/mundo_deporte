@@ -1,4 +1,4 @@
-/* importa las fuentes desde google fonts */
+/* importa las fuentes desde google fonts */ 
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* Declaramos el tipo de fuente que se utilizara por defecto en la pagina  */
@@ -105,14 +105,11 @@ body{
 /* Creamos una grilla para los productos de la seccion "Lo mas nuevo" */
 .container-products{
     display: grid;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
     /* padding-bottom: 200px; */
 
-	grid-template-areas:'p1 p2 p3 p4'; 
-    grid-template-columns: 22% 22% 22% 22%;
-    border: 5px solid gray;
-    gap:4%;
+	
 
     /* grid-template-rows: 70% 30%; */
 }
@@ -157,19 +154,20 @@ margin:0 0 0 0;
 /* desplazamos un poco hacia la derecha todo los inputs */
 .login-data-container{
     margin-left: 10%;
+    margin-right: 10%;
 }
 /* Centramos el titulo */
 .login-title{
     text-align: center;
 }
-/* Removemos los bordes de los inputs y los separamos un poco */
+/* Removemos los bordes de los inputs y los separamos un poco 
 #uname,#pass,#pass2,#email,#r-email{
     border: 3px none #000000;
     border-bottom: solid #000000;
     background-color: lightgray;
     margin-top: 2%;
     margin-left: 1%;
-}
+}*/
 /* Centramos el boton de registrarse */
 .submit-container{
     display:flex;

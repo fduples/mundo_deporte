@@ -71,7 +71,9 @@ document.addEventListener('DOMContentLoaded', function() {//Este método lo usam
         // Aca la idea es que se muestre lo que el administrador puede ver
         if (isAdmin && isAdmin === 'true') {
             if (carritoAdminLink != null && currentPath != '/mundo_deporte/templates/usuarios.html' || currentPath != '/mundo_deporte/templates/productos.html' || currentPath != '/mundo_deporte/templates/admin.html') {
-                carritoAdminLink.style.display = 'none';
+                if (carritoAdminLink) {
+                    carritoAdminLink.style.display = 'none';
+                }
             }
             if (currentPath === '/mundo_deporte/index.html' || currentPath === '/mundo_deporte/') {
                 const adminElement = document.createElement('a');

@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../static/css/style.css">
 
     <title>Mundo deportes login</title>
 </head>
+
 <body>
     <header>
         <!--Header container-->
@@ -15,10 +18,10 @@
             <a class="login-register" href="">
                 <img src="../static/img/user.png" width="20px" height="20px">
                 Entrar/Registrarse
-            </a> 
+            </a>
             <a class="logo" href="../index.html">
                 <img src="../static/img/logo.jpg">
-            </a>            <!--Cart-->
+            </a> <!--Cart-->
             <a class="cart" href="">
                 <img src="../static/img/cart.png" width="20px" height="20px">
                 Carrito
@@ -30,14 +33,9 @@
                         <a href="../index.html">Inicio</a>
                     </li>
                     <li class="header-element">
-                        <a href="">Ropa Deportiva</a>
+                        <a href="products.html">Todos los Productos</a>
                     </li>
-                    <li class="header-element">
-                        <a href="">Artes Marciales</a>
-                    </li>
-                    <li class="header-element">
-                        <a href="">Deportes</a>
-                    </li>
+
                     <li class="header-element">
                         <a href="about.html">Acerca de nosotros</a>
                     </li>
@@ -51,39 +49,34 @@
             <h1 class="login-title">Login</h1>
             <div class="login-data-container">
                 <div>
-                    <label for="uname">
-                        <b>Nombre de usuario o correo electronico: </b>
-                    </label>
-                    <input type="text" placeholder="jhondoe@gmail.com" name="uname" id="uname"required>
+                    <label for="uname">Nombre de usuario o correo electronico:</label>
+                    <input class="form-control" type="text" placeholder="jhondoe@gmail.com" name="uname" id="uname"
+                        required>
                 </div>
                 <div>
-                    <label for="pass">
-                        <b>Contraseña: </b>
-                    </label>
-                    <input type="password" placeholder="Contraseña" name="pass" id="pass" required>
+                    <label for="pass">Contraseña:</label>
+                    <input class="form-control" type="password" placeholder="Contraseña" name="pass" id="pass" required>
                 </div>
-                <div style="margin-top: 2%;">
-                    <a href="register.html">¿No tienes una cuenta?</a>
-                </div>
-            </div>
+                <a href="register.html">¿No tienes una cuenta?</a>
 
-            <div class="submit-container">
-                <input type="submit" value="INGRESAR" id="login-btn">
-            </div>
-            <label>
-                <input type="checkbox" checked="checked" name="remember" style="margin-left: 10%;"> Recordar contraseña
-            </label>
-            <div>
-                <a href="" style="margin-left: 10%;">¿Has olvidado tu contraseña?</a>
-            </div>
+                <div class="submit-container">
+                    <input class="btn btn-primary" type="submit" value="INGRESAR" id="login-btn">
+                </div>
+                <label><input type="checkbox" checked="checked" name="remember"> Recordar contraseña</label>
+                <div>
+                    <a href="">¿Has olvidado tu contraseña?</a>
+                </div>
         </form>
+
     </section>
 
     <footer>
         <div class="footer">
-            <p>Esta pagina ha sido creada con propositos educativos y las imagenes fueron tomadas de diversas paginas por lo tanto creditos a sus respectivos autores</p>
+            <p>Esta pagina ha sido creada con propositos educativos y las imagenes fueron tomadas de diversas paginas
+                por lo tanto creditos a sus respectivos autores</p>
         </div>
-</footer>
-<script src="../static/js/login.js"></script>
+    </footer>
+    <script src="../static/js/login.js"></script>
 </body>
+
 </html>

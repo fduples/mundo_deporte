@@ -6,6 +6,7 @@ fetch('https://fduples.pythonanywhere.com/productos', {
 })
 .then(response => response.json())
 .then(data => {
+    console.log('Fetched product data:', data);
 
     const productGrid = document.getElementById('productGrid');
     productGrid.innerHTML = '';
@@ -22,6 +23,7 @@ fetch('https://fduples.pythonanywhere.com/productos', {
             <div class="card-body">
                 <h5 class="card-title">${product.nombre}</h5>
                 <p class="card-text">$${product.precio.toFixed(2)}</p>
+                <a href="product.html?id=${product.id}" class="btn btn-primary">Ver Producto</a>
             </div>
         `;
 

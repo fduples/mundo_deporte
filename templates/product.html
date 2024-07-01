@@ -1,92 +1,84 @@
-<!-- ctrl + shitf + p (Open options vscode "simple browser:show") -->
-
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../static/css/style.css">
-        <title>Mundo deportes producto</title>
-    </head>
-    <body>
-        <header>
-            <!--Header container-->
-            <div class="container">
-                <!--User Login-->
-                <a class="login-register" href="login.html">
-                    <img src="../static/img/user.png" width="20px" height="20px">
-                    Entrar/Registrarse
-                </a> 
-                <a class="logo" href="../index.html">
-                    <img src="../static/img/logo.jpg">
-                </a>
-                <!--Cart-->
-                <a class="cart" href="">
-                    <img src="../static/img/cart.png" width="20px" height="20px">
-                    Carrito
-                </a>
-                <!--Nav Menu-->
-                <nav class="nav-menu">
-                    <ul class="nav-menu-ul">
-                        <li class="header-element">
-                            <a href="">Ropa Deportiva</a>
-                        </li>
-                        <li class="header-element">
-                            <a href="">Artes Marciales</a>
-                        </li>
-                        <li class="header-element">
-                            <a href="">Deportes</a>
-                        </li>
-                        <li class="header-element">
-                            <a href="about.html">Acerca de nosotros</a>
-                        </li>
-                    </ul>
-                </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>Mundo deportes producto</title>
+</head>
+<body>
+    <header>
+        <!--Header container-->
+        <div class="container">
+            <!--User Login-->
+            <a class="login-register" href="login.html">
+                <img src="../static/img/user.png" width="20px" height="20px">
+                Entrar/Registrarse
+            </a> 
+            <a class="logo" href="../index.html">
+                <img src="../static/img/logo.jpg">
+            </a>
+            <!--Cart-->
+            <a class="cart" href="">
+                <img src="../static/img/cart.png" width="20px" height="20px">
+                Carrito
+            </a>
+            <!--Nav Menu-->
+            <nav class="nav-menu">
+                <ul class="nav-menu-ul">
+                    <li class="header-element">
+                        <a href="../index.html">Inicio</a>
+                    </li>
+                    <li class="header-element">
+                        <a href="templates/products.html">Todos los Productos</a>
+                    </li>
+                    
+                    <li class="header-element">
+                        <a href="templates/about.html">Acerca de nosotros</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!--Body-->
+    <section class="new-products">
+        <div class="product-container-page">
+            <div class="product-img" >
+                <img id="productImg" src="" width="80%" alt="Producto">
             </div>
-        </header>
-        <!--Body-->
-        <section class="new-products" style="display: none;">
-            <div class="product-container-page">
-                <div class="product-img" >
-                    <img src="" width="80%">
+            <div class="product-title">
+                <h2 id="productTitle"></h2>
+            </div>
+            <div class="product-price">
+                <h2 id="productPrice"></h2>
+            </div>
+            <div class="product-description">
+                <div>
+                    <p><strong>CARACTERISTICAS DEL PRODUCTO:</strong></p>
                 </div>
-                <div class="product-title">
-                    <h2></h2>
-                </div>
-                <div class="product-price">
-                    <h2></h2>
-                </div>
-                <div class="product-desription">
-                    <div>
-                        <p><strong>CARACTERISTICAS DEL PRODUCTO:</strong></p>
-                    </div>
-                    <p>
+                <p id="productDescription"></p>
+            </div>
+            <div class="product-quantity">
+                <p id="productStock"></p>
+            </div>
+            <div class="add-product">
+                <button class="less" onclick="less()"><</button>
+                <input type="number" id="productQuantity" value="1" min="1" max="50">
+                <button class="more" onclick="more()">></button>
+                <button onclick="addToCart()">Añadir al carrito</button>
+            </div>
+        </div>
+    </section>
 
-                    </p>
-                </div>
-                <div class="product-quantity">
-                    <p></p>
-                </div>
-                <div class="add-product">
-                    <button class="less" onclick="less()"><</button>
-                    <input type="number" value="1" min="1" max="50" disabled>
-                    <button class="more" onclick="more()">></button>
-                    <button>Añadir al carrito</button>
-                </div>
-            </div>
-        </section>
-    
-        <footer>
-            <div class="footer">
-                <p>Esta pagina ha sido creada con propositos educativos y las imagenes fueron tomadas de diversas paginas por lo tanto creditos a sus respectivos autores</p>
-            </div>
+    <footer>
+        <div class="footer">
+            <p>Esta pagina ha sido creada con propositos educativos y las imagenes fueron tomadas de diversas paginas por lo tanto creditos a sus respectivos autores</p>
+        </div>
     </footer>
+
     <div id="disqus_thread" style="margin: 0 5% 0 5%;"></div>
+
     <script src="../static/js/product.js"></script>
-
-
     <script src="../static/js/auth.js"></script>
-    </body>
+</body>
 </html>
-
-
