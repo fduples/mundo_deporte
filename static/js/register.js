@@ -65,7 +65,7 @@ function register() {
         return false;
     }
 
-    if (contrasenia.value.length <= 8 || contrasenia2.value.length <= 8) {
+    if (contrasenia.value.length <= 7 || contrasenia2.value.length <= 7) {
         Swal.fire({
             icon: "warning",
             title: "ERROR en la contraseña",
